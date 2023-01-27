@@ -1,0 +1,259 @@
+@keyframes fade-in {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+    
+}
+.header {
+    padding-top: 40px;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    backdrop-filter: blur(10px);
+    z-index: 100px;
+
+}
+
+.header__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.header__left {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 80px;
+}
+
+.logo {
+
+    transition: 500ms;
+    width: 167px;
+    height: 83px;
+    transform: translateX(-200%);
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+
+}
+
+.languages__select {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 17.5px;
+    font-family: 'Rubik', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+
+}
+
+.select-img {
+    transition: 300ms ease;
+    transform: rotate(-90deg);
+    width: 15.02px;
+    height: 9.02px;
+ 
+}
+
+.select-img_active {
+    transform: rotate(0deg);
+}
+
+.header__languages {
+    min-width: 23%;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.languages-modal {
+    width: 140px;
+    height: 140px;
+    background: #6F6F6F;
+    box-shadow: 0px 15px 120px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    transition: 300ms ease;
+    transform-origin: top;
+    transform: translateX(-50%) scale(0);
+    padding: 10px 15px 15px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    left: 50%;
+    top: 33px;
+}
+
+.languages-modal_active {
+    display: flex !important;
+    transform: translateX(-50%) scale(1);
+}
+
+.header__language {
+    display: flex;
+    align-items: center;
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 150%;
+}
+
+.header__language img {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+    margin-right: 10px;
+    width: 26px;
+    height: 17px;
+}
+
+.header__navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 27px;
+}
+
+.header__link {
+    color: #FFFFFF;
+    letter-spacing: 0.03em;
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 18px;
+    position: relative;
+    transition: 300ms ease;
+    transition-delay: 4s;
+    outline: none;
+    opacity: 0;
+ 
+}
+
+.header__navbar .header__link::after {
+    content: '';
+    display: block;
+    transition: 300ms ease;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(135deg, #69E4A3 0%, #D2E66A 56.25%, #FDE753 100%);
+    position: absolute;
+    bottom: -9px;
+    border: none;
+}
+
+.header__navbar .header__link:hover::after {
+    width: 100%;    
+}
+
+.header__phone {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12.81px;
+    img{
+        transition: 1s;
+     
+        
+    
+        
+
+
+       
+        
+    }
+}
+.logo-active{
+    transform: translateX(0%);
+    transition-delay: 1s;
+}
+.links-active{
+    transition-delay: 500ms;
+  opacity: 1;
+
+}
+.number-active{
+    transition-delay: 1.5s;
+    opacity: 1;
+
+}
+
+
+
+.burger__icon{
+    transition: 500ms;
+    width: 38px;
+    height: 38px;
+    display: none;
+    .burger__vector{
+        width: 30px;
+        height: 4px;
+        margin-left: 14px;
+        margin-top: 6px;
+        background-color: white ;
+        transition: 500ms;
+        &:nth-child(2){
+            width: 40px;
+            margin-left: 4px;
+            
+        }
+     
+    }
+
+} 
+
+@media screen and (min-width: 2000px) {
+    .header__link{
+      font-size: 30px;
+    }
+    .lng{
+        font-size: 30px;
+    }
+  
+}
+@media screen and (max-width: 1150px) {
+    .header__link{
+      font-size: 18px;
+    }
+    .lng{
+        font-size: 18px;
+    }
+    .logo img {
+        width: 80%;
+        height: 80%;
+        margin-top: 15px;
+    }
+    .header__left{
+        gap: 0px;
+    }
+  
+    
+}
+@media screen and (max-width: 650px){
+    .header__link{
+        display: none;
+    }
+    .languages__select{
+        display: none;
+    }
+    .burger__icon{
+        display: block;
+    }
+
+}
+
+
+@import url('./media.scss');
+
